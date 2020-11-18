@@ -9,7 +9,7 @@ import SwiftUI
 
 // TODO
 // - [x] listを表示したい
-// - [ ] scrollさせる
+// - [x] scrollさせる
 // - [ ] 画面の下に表示する
 // - [ ] ショートカットキーで呼ぶ
 // - [ ] クリップボード監視する
@@ -27,7 +27,7 @@ struct ContentView: View {
                 EmojiTile(text: "😉", color: .green)
                 EmojiTile(text: "😊", color: .purple)
             }
-        }.frame(maxWidth: 1000, maxHeight: 1000)
+        }
     }
 }
 
