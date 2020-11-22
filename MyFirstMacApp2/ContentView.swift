@@ -17,15 +17,17 @@ struct ContentView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack {
-                EmojiTile(text: "😀", color: .blue)
-                EmojiTile(text: "😉", color: .green)
-                EmojiTile(text: "😊", color: .purple)
-                EmojiTile(text: "😀", color: .blue)
-                EmojiTile(text: "😉", color: .green)
-                EmojiTile(text: "😊", color: .purple)
-                EmojiTile(text: "😀", color: .blue)
-                EmojiTile(text: "😉", color: .green)
-                EmojiTile(text: "😊", color: .purple)
+                ForEach(1..<100) { _ in
+                    EmojiTile(text: "😀", color: .blue)
+                    EmojiTile(text: "😉", color: .green)
+                    EmojiTile(text: "😊", color: .purple)
+                    EmojiTile(text: "😀", color: .blue)
+                    EmojiTile(text: "😉", color: .green)
+                    EmojiTile(text: "😊", color: .purple)
+                    EmojiTile(text: "😀", color: .blue)
+                    EmojiTile(text: "😉", color: .green)
+                    EmojiTile(text: "😊", color: .purple)
+                }
             }
         }
     }

@@ -15,17 +15,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
 
         // Create the window and set the content view.
+        let frameSize = NSScreen.screens[0].visibleFrame.size
+        let rect = NSRect(x: 0,
+                          y: 0,
+                          width: frameSize.width,
+                          height: 500)
         window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 500, height: 500),
+            contentRect: rect,
             styleMask: [.titled, .closable],
             backing: .buffered, defer: false)
         window.isReleasedWhenClosed = false
-        window.center()
         window.setFrameAutosaveName("Main Window")
+        // Create the SwiftUI view that provides the window contents.
+        let contentView = ContentView()
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
     }
