@@ -7,12 +7,19 @@
 
 import Cocoa
 import SwiftUI
+import HotKey
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var window: NSWindow!
-
+    private var window: NSWindow!
+    private var hotKey: HotKey = {
+        let hotKey = HotKey(key: .r, modifiers: [.option, .command, .control])
+        hotKey.keyDownHandler = {
+            NSApplication.shared.activate(ignoringOtherApps: true)
+        }
+        return hotKey
+    }()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
 

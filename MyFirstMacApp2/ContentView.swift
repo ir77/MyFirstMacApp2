@@ -10,8 +10,8 @@ import SwiftUI
 // TODO
 // - [x] listを表示したい
 // - [x] scrollさせる
+// - [x] ショートカットキーで画面を表示する
 // - [ ] 画面の下に表示する
-// - [ ] ショートカットキーで呼ぶ
 // - [ ] クリップボード監視する
 struct ContentView: View {
     var body: some View {
