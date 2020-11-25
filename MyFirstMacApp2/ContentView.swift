@@ -11,8 +11,10 @@ import SwiftUI
 // - [x] listを表示したい
 // - [x] scrollさせる
 // - [x] ショートカットキーで画面を表示する
-// - [ ] 画面の下に表示する
+// - [x] 画面の下に表示する
 // - [ ] クリップボード監視する
+// - [ ] アプリを永続化させる
+// - [ ] エスケープや別画面を触るとhideさせる
 struct ContentView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) {
