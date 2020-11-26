@@ -28,16 +28,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let rect = NSRect(x: 0,
                           y: 0,
                           width: frameSize.width,
-                          height: 178.0)
+                          height: 150.0)
         window = NSWindow(
             contentRect: rect,
-            styleMask: [.titled, .closable],
+            styleMask: [],
             backing: .buffered, defer: false)
         window.isReleasedWhenClosed = false
         window.setFrameAutosaveName("Main Window")
-        window.setFrameTopLeftPoint(NSPoint(x: 0.0, y: 178.0))
+        window.setFrameTopLeftPoint(NSPoint(x: 0.0, y: 150.0))
         window.level = .floating
-        
+        window.titleVisibility = .hidden
+  
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
         window.contentView = NSHostingView(rootView: contentView)
