@@ -43,6 +43,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let contentView = ContentView()
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
+        
+        let pasteboard = NSPasteboard.general
+        print(pasteboard.pasteboardItems?.first?.string(forType: .string))
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
