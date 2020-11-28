@@ -44,14 +44,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
         
-        let pasteboard = NSPasteboard.general
-        print(pasteboard.pasteboardItems?.first?.string(forType: .string))
+        PasteboardObserver.shared.start()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onPasteboardChanged),
+                                               name: .NSPasteboardDidChange,
+                                               object: nil)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+        PasteboardObserver.shared.stop()
     }
 
-
+    @objc private func onPasteboardChanged(_ notification: Notification) {
+        guard let pb = notification.object as? NSPasteboard else { return }
+        guard let items = pb.pasteboardItems else { return }
+        guard let item = items.first?.string(forType: .string) else { return } // you should handle multiple types
+      
+        print("New item in pasteboard: '\(item)'")
+    }
 }
 
