@@ -14,30 +14,27 @@ import SwiftUI
 // - [x] 画面の下に表示する
 // - [x] クリップボードのアイテムを取得する
 // - [x] クリップボード監視する
-// - [ ] クリップボードの変更をアプリ内に保存していく
+// - [x] クリップボードの状態を画面に反映する
+// - [ ] クリップボードの変更をメモリに保存する
+// - [ ] クリップボードの変更をディスクに保存する
 // - [ ] アプリを永続化させる
 // - [ ] エスケープや別画面を触るとhideさせる
+// - [ ] 複数の型に対応する
 struct ContentView: View {
+    @ObservedObject var pasteboardObservableObject: PasteboardObservableObject
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack {
-                ForEach(1..<100) { _ in
-                    EmojiTile(text: "😀", color: .blue)
-                    EmojiTile(text: "😉", color: .green)
-                    EmojiTile(text: "😊", color: .purple)
-                    EmojiTile(text: "😀", color: .blue)
-                    EmojiTile(text: "😉", color: .green)
-                    EmojiTile(text: "😊", color: .purple)
-                    EmojiTile(text: "😀", color: .blue)
-                    EmojiTile(text: "😉", color: .green)
-                    EmojiTile(text: "😊", color: .purple)
+                ForEach(pasteboardObservableObject.observableItems) { item in
+                    Tile(text: item.contents, color: .blue)
                 }
             }
         }
     }
 }
 
-struct EmojiTile: View {
+struct Tile: View {
     var text: String
     var color: Color
     
@@ -53,6 +50,6 @@ struct EmojiTile: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(pasteboardObservableObject: PasteboardObservableObject.shared)
     }
 }

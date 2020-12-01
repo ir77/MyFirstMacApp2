@@ -35,33 +35,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             backing: .buffered, defer: false)
         window.isReleasedWhenClosed = false
         window.setFrameAutosaveName("Main Window")
-        window.setFrameTopLeftPoint(NSPoint(x: 0.0, y: 150.0))
+        window.setFrameTopLeftPoint(NSPoint(x: 0.0, y: 0.0))
         window.level = .floating
         window.titleVisibility = .hidden
   
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        let contentView = ContentView(pasteboardObservableObject: PasteboardObservableObject.shared)
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
-        
-        PasteboardObserver.shared.start()
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(onPasteboardChanged),
-                                               name: .NSPasteboardDidChange,
-                                               object: nil)
-    }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-        PasteboardObserver.shared.stop()
-    }
-
-    @objc private func onPasteboardChanged(_ notification: Notification) {
-        guard let pb = notification.object as? NSPasteboard else { return }
-        guard let items = pb.pasteboardItems else { return }
-        guard let item = items.first?.string(forType: .string) else { return } // you should handle multiple types
-      
-        print("New item in pasteboard: '\(item)'")
     }
 }
 
