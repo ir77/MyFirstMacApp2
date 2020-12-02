@@ -23,7 +23,7 @@ import SwiftUI
 // - [ ] 重複は排除する
 struct ContentView: View {
     @ObservedObject var pasteboardObservableObject: PasteboardObservableObject
-    
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack {
@@ -38,7 +38,7 @@ struct ContentView: View {
 struct Tile: View {
     var text: String
     var color: Color
-    
+
     var body: some View {
         Text(text)
             .font(.custom("Emoji", size: 50))
@@ -47,7 +47,6 @@ struct Tile: View {
             .cornerRadius(10)
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -38,11 +38,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.setFrameTopLeftPoint(NSPoint(x: 0.0, y: 150.0))
         window.level = .floating
         window.titleVisibility = .hidden
-  
+
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView(pasteboardObservableObject: PasteboardObservableObject.shared)
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
     }
 }
-

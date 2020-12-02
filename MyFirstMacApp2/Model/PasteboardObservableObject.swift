@@ -15,7 +15,7 @@ final class PasteboardObservableObject: ObservableObject {
         if let cachedItems: [PasteboardItem] = UserDefaultsManager.value(forKey: .pasteboardItems) {
             observableItems = cachedItems
         }
-        
+
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(onPasteboardChanged),
                                                name: .NSPasteboardDidChange,
@@ -23,11 +23,10 @@ final class PasteboardObservableObject: ObservableObject {
         PasteboardObserver.shared.start()
     }
 
-
     @objc private func onPasteboardChanged(_ notification: Notification) {
-        guard let pb = notification.object as? NSPasteboard else { return }
-        guard let items = pb.pasteboardItems else { return }
-      
+        guard let pasteboard = notification.object as? NSPasteboard else { return }
+        guard let items = pasteboard.pasteboardItems else { return }
+
         // you should handle multiple types
         guard let item = items.first?.string(forType: .string) else { return }
 
@@ -39,7 +38,7 @@ final class PasteboardObservableObject: ObservableObject {
 struct PasteboardItem: Identifiable, Codable {
     let id: UUID
     let contents: String
-    
+
     init(id: UUID = UUID(), contents: String) {
         self.id = id
         self.contents = contents
