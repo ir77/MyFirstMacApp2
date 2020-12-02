@@ -35,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             backing: .buffered, defer: false)
         window.isReleasedWhenClosed = false
         window.setFrameAutosaveName("Main Window")
-        window.setFrameTopLeftPoint(NSPoint(x: 0.0, y: 0.0))
+        window.setFrameTopLeftPoint(NSPoint(x: 0.0, y: 150.0))
         window.level = .floating
         window.titleVisibility = .hidden
   

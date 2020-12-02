@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0338A52577E9C900E3775D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0338A42577E9C900E3775D /* UserDefaultsManager.swift */; };
 		AC1ABD5825615F410068AF39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1ABD5725615F410068AF39 /* AppDelegate.swift */; };
 		AC1ABD5A25615F410068AF39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1ABD5925615F410068AF39 /* ContentView.swift */; };
 		AC1ABD5C25615F420068AF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1ABD5B25615F420068AF39 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC0338A42577E9C900E3775D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		AC1ABD5425615F410068AF39 /* MyFirstMacApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstMacApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1ABD5725615F410068AF39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1ABD5925615F410068AF39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,8 +155,9 @@
 		AC2C9CE52572756100140D91 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AC2C9CE62572759B00140D91 /* PasteboardObserver.swift */,
 				AC30B86B257688D100E3DEB8 /* PasteboardObservableObject.swift */,
+				AC2C9CE62572759B00140D91 /* PasteboardObserver.swift */,
+				AC0338A42577E9C900E3775D /* UserDefaultsManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC30B86C257688D100E3DEB8 /* PasteboardObservableObject.swift in Sources */,
+				AC0338A52577E9C900E3775D /* UserDefaultsManager.swift in Sources */,
 				AC2C9CE72572759B00140D91 /* PasteboardObserver.swift in Sources */,
 				AC1ABD5A25615F410068AF39 /* ContentView.swift in Sources */,
 				AC1ABD5825615F410068AF39 /* AppDelegate.swift in Sources */,
