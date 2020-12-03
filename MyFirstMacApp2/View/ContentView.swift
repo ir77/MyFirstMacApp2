@@ -17,7 +17,7 @@ struct ContentView: View {
                     Tile(text: item.contents, color: .blue)
                 }
             }
-        }
+        }.padding(10)
     }
 }
 

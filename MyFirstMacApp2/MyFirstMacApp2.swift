@@ -38,12 +38,13 @@ struct MyFirstMacApp2: App {
         }
         return hotKey
     }()
-    let frameSize = NSScreen.screens[0].visibleFrame.size
+
+    private let frameSize = NSScreen.screens[0].visibleFrame.size
 
     var body: some Scene {
         WindowGroup {
             ContentView(pasteboardObservableObject: PasteboardObservableObject.shared)
-                .frame(width: frameSize.width, height: 200.0, alignment: .bottom)
+                .frame(width: frameSize.width, height: 228.0, alignment: .bottom)
         }
     }
 }
