@@ -28,6 +28,8 @@ import SwiftUI
 // - [ ] String以外の複数のコピー型に対応する
 // - [ ] テキストの重複は排除する
 // - [ ] DB検討
+// - [ ] ログイン時に起動する
+//   - https://blog.piyo.tech/posts/2020-05-12-mac-app-memo/
 
 @main
 struct MyFirstMacApp2: App {

@@ -13,7 +13,6 @@
 		AC1ABD5A25615F410068AF39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1ABD5925615F410068AF39 /* ContentView.swift */; };
 		AC1ABD5C25615F420068AF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1ABD5B25615F420068AF39 /* Assets.xcassets */; };
 		AC1ABD5F25615F420068AF39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1ABD5E25615F420068AF39 /* Preview Assets.xcassets */; };
-		AC1ABD6225615F420068AF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1ABD6025615F420068AF39 /* Main.storyboard */; };
 		AC1ABD6E25615F420068AF39 /* MyFirstMacApp2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1ABD6D25615F420068AF39 /* MyFirstMacApp2Tests.swift */; };
 		AC1ABD7925615F420068AF39 /* MyFirstMacApp2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1ABD7825615F420068AF39 /* MyFirstMacApp2UITests.swift */; };
 		AC2C9CE72572759B00140D91 /* PasteboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C9CE62572759B00140D91 /* PasteboardObserver.swift */; };
@@ -46,7 +45,6 @@
 		AC1ABD5925615F410068AF39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC1ABD5B25615F420068AF39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1ABD5E25615F420068AF39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AC1ABD6125615F420068AF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC1ABD6325615F420068AF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC1ABD6425615F420068AF39 /* MyFirstMacApp2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyFirstMacApp2.entitlements; sourceTree = "<group>"; };
 		AC1ABD6925615F420068AF39 /* MyFirstMacApp2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstMacApp2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +111,6 @@
 				AC2C9CE32572754B00140D91 /* View */,
 				AC2C9CE52572756100140D91 /* Model */,
 				AC1ABD5B25615F420068AF39 /* Assets.xcassets */,
-				AC1ABD6025615F420068AF39 /* Main.storyboard */,
 				AC1ABD6325615F420068AF39 /* Info.plist */,
 				AC1ABD6425615F420068AF39 /* MyFirstMacApp2.entitlements */,
 				AC1ABD5D25615F420068AF39 /* Preview Content */,
@@ -275,7 +272,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1ABD6225615F420068AF39 /* Main.storyboard in Resources */,
 				AC1ABD5F25615F420068AF39 /* Preview Assets.xcassets in Resources */,
 				AC1ABD5C25615F420068AF39 /* Assets.xcassets in Resources */,
 			);
@@ -362,17 +358,6 @@
 			targetProxy = AC1ABD7525615F420068AF39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		AC1ABD6025615F420068AF39 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC1ABD6125615F420068AF39 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AC1ABD7B25615F420068AF39 /* Debug */ = {
