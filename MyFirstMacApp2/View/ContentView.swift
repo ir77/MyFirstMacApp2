@@ -17,11 +17,16 @@ import SwiftUI
 // - [x] クリップボードの状態を画面に反映する
 // - [x] クリップボードの変更をメモリに保存する
 // - [x] クリップボードの変更をディスクに保存する
+// - Architecture
+// - [ ] パッケージ分割
+// - View
+// - [ ] デザインよくする
+// - Model
 // - [ ] アプリを永続化させる
 // - [ ] エスケープや別画面を触るとhideさせる
 // - [ ] String以外の複数のコピー型に対応する
-// - [ ] 重複は排除する
-// - [ ] パッケージ分割
+// - [ ] テキストの重複は排除する
+// - [ ] DB検討
 struct ContentView: View {
     @ObservedObject var pasteboardObservableObject: PasteboardObservableObject
 
