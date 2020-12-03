@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import HotKey
 
 // TODO
 // - [x] listを表示したい
@@ -18,12 +17,13 @@ import HotKey
 // - [x] クリップボードの状態を画面に反映する
 // - [x] クリップボードの変更をメモリに保存する
 // - [x] クリップボードの変更をディスクに保存する
+// - [x] タスクに出さないようにする&ステータスバーに文字を表示
 // - Architecture
 // - [ ] パッケージ分割
 // - View
 // - [ ] デザインよくする
 // - Model
-// - [ ] アプリを永続化させる
+// - [WIP] アプリを永続化させる
 // - [ ] エスケープや別画面を触るとhideさせる
 // - [ ] String以外の複数のコピー型に対応する
 // - [ ] テキストの重複は排除する
@@ -31,16 +31,10 @@ import HotKey
 
 @main
 struct MyFirstMacApp2: App {
-    private var hotKey: HotKey = {
-        let hotKey = HotKey(key: .r, modifiers: [.option, .command, .control])
-        hotKey.keyDownHandler = {
-            NSApplication.shared.activate(ignoringOtherApps: true)
-        }
-        return hotKey
-    }()
+    // swiftlint:disable weak_delegate
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     private let frameSize = NSScreen.screens[0].visibleFrame.size
-
     var body: some Scene {
         WindowGroup {
             ContentView(pasteboardObservableObject: PasteboardObservableObject.shared)

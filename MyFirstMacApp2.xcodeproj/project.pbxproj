@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC0338A52577E9C900E3775D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0338A42577E9C900E3775D /* UserDefaultsManager.swift */; };
+		AC0338C3257923BD00E3775D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0338C2257923BD00E3775D /* AppDelegate.swift */; };
 		AC1ABD5825615F410068AF39 /* MyFirstMacApp2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1ABD5725615F410068AF39 /* MyFirstMacApp2.swift */; };
 		AC1ABD5A25615F410068AF39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1ABD5925615F410068AF39 /* ContentView.swift */; };
 		AC1ABD5C25615F420068AF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1ABD5B25615F420068AF39 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		AC0338A42577E9C900E3775D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		AC0338C2257923BD00E3775D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1ABD5425615F410068AF39 /* MyFirstMacApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstMacApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1ABD5725615F410068AF39 /* MyFirstMacApp2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstMacApp2.swift; sourceTree = "<group>"; };
 		AC1ABD5925615F410068AF39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				AC1ABD5725615F410068AF39 /* MyFirstMacApp2.swift */,
+				AC0338C2257923BD00E3775D /* AppDelegate.swift */,
 				AC2C9CE32572754B00140D91 /* View */,
 				AC2C9CE52572756100140D91 /* Model */,
 				AC1ABD5B25615F420068AF39 /* Assets.xcassets */,
@@ -320,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0338C3257923BD00E3775D /* AppDelegate.swift in Sources */,
 				AC30B86C257688D100E3DEB8 /* PasteboardObservableObject.swift in Sources */,
 				AC0338A52577E9C900E3775D /* UserDefaultsManager.swift in Sources */,
 				AC2C9CE72572759B00140D91 /* PasteboardObserver.swift in Sources */,
