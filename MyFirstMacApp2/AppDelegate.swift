@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func setupStatusBar() {
         statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-        statusBarItem?.button?.title = "Test"
+        statusBarItem?.button?.title = "📋"
 
         let menu = NSMenu()
         menu.addItem(NSMenuItem(title: "Quit",
