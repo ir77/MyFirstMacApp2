@@ -17,10 +17,9 @@ extension PasteboardObservableObject {
         static let shared = PasteboardObserver()
         private init() {}
 
-        let pasteboard: NSPasteboard = .general
-
-        var timer: Timer!
-        var lastChangeCount: Int = 0
+        private let pasteboard: NSPasteboard = .general
+        private var timer: Timer!
+        private var lastChangeCount: Int = 0
 
         func start() {
             timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true, block: timerHandler)

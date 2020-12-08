@@ -32,7 +32,9 @@ struct Tile: View {
             .background(color)
             .cornerRadius(10)
             .onTapGesture {
-                print(text)
+                let pasteboard = NSPasteboard.general
+                pasteboard.clearContents()
+                print(pasteboard.setString(text, forType: .string))
             }
     }
 }
