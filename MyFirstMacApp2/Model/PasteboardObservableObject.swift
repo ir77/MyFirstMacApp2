@@ -29,7 +29,10 @@ final class PasteboardObservableObject: ObservableObject {
 
         // you should handle multiple types
         guard let item = items.first?.string(forType: .string) else { return }
+        insertNew(item)
+    }
 
+    private func insertNew(_ item: String) {
         observableItems.insert(PasteboardItem(contents: item), at: 0)
         UserDefaultsManager.set(pasteboardItems: observableItems)
     }

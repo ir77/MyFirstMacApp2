@@ -31,6 +31,9 @@ struct Tile: View {
             .padding(50)
             .background(color)
             .cornerRadius(10)
+            .onTapGesture {
+                print(text)
+            }
     }
 }
 
