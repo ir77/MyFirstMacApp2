@@ -18,9 +18,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }()
 
     private var statusBarItem: NSStatusItem?
-
     func applicationDidFinishLaunching(_ notification: Notification) {
+        setupStatusBar()
+    }
+
+    private func setupStatusBar() {
         statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         statusBarItem?.button?.title = "Test"
+
+        let menu = NSMenu()
+        menu.addItem(NSMenuItem(title: "Quit",
+                                action: #selector(NSApplication.terminate(_:)),
+                                keyEquivalent: "q"))
+        statusBarItem?.menu = menu
     }
 }
