@@ -20,6 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusBarItem: NSStatusItem?
     func applicationDidFinishLaunching(_ notification: Notification) {
         setupStatusBar()
+        _ = WorkspaceObserver.shared
     }
 
     private func setupStatusBar() {
