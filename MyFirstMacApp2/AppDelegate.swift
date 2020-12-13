@@ -10,7 +10,7 @@ import HotKey
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     private let hotKey: HotKey = {
-        let hotKey = HotKey(key: .r, modifiers: [.option, .command, .control])
+        let hotKey = HotKey(key: .v, modifiers: [.command, .shift])
         hotKey.keyDownHandler = {
             NSApplication.shared.activate(ignoringOtherApps: true)
         }
@@ -20,7 +20,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusBarItem: NSStatusItem?
     func applicationDidFinishLaunching(_ notification: Notification) {
         setupStatusBar()
-        _ = WorkspaceObserver.shared
     }
 
     private func setupStatusBar() {

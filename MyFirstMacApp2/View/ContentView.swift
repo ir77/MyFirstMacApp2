@@ -34,7 +34,9 @@ struct Tile: View {
             .onTapGesture {
                 let pasteboard = NSPasteboard.general
                 pasteboard.clearContents()
-                print(pasteboard.setString(text, forType: .string))
+                pasteboard.setString(text, forType: .string)
+                NSApp.hide(nil)
+                KeyboardManager.vKeyDownAndUpWithCommand()
             }
     }
 }

@@ -12,8 +12,6 @@ import SwiftUI
 // - View
 // - [ ] デザインよくする
 // - [ ] 常に画面下部に表示する
-// - [ ] タップされたらペースト
-//   - https://stackoverflow.com/questions/40096457/swift-macos-how-to-paste-into-another-application
 // - Model
 // - [ ] エスケープや別画面を触るとhideさせる
 // - [ ] String以外の複数のコピー型に対応する

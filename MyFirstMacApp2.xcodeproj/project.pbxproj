@@ -18,7 +18,7 @@
 		AC2C9CE72572759B00140D91 /* PasteboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C9CE62572759B00140D91 /* PasteboardObserver.swift */; };
 		AC30B86C257688D100E3DEB8 /* PasteboardObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30B86B257688D100E3DEB8 /* PasteboardObservableObject.swift */; };
 		AC4870F9256BDFF300A909B9 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = AC4870F8256BDFF300A909B9 /* HotKey */; };
-		ACA0081525811B8000FED80A /* WorkspaceObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0081425811B8000FED80A /* WorkspaceObserver.swift */; };
+		ACA0081A25864C4500FED80A /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0081925864C4500FED80A /* KeyboardManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		AC1ABD7A25615F420068AF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC2C9CE62572759B00140D91 /* PasteboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardObserver.swift; sourceTree = "<group>"; };
 		AC30B86B257688D100E3DEB8 /* PasteboardObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardObservableObject.swift; sourceTree = "<group>"; };
-		ACA0081425811B8000FED80A /* WorkspaceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceObserver.swift; sourceTree = "<group>"; };
+		ACA0081925864C4500FED80A /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +159,8 @@
 			children = (
 				AC30B86B257688D100E3DEB8 /* PasteboardObservableObject.swift */,
 				AC2C9CE62572759B00140D91 /* PasteboardObserver.swift */,
-				ACA0081425811B8000FED80A /* WorkspaceObserver.swift */,
 				AC0338A42577E9C900E3775D /* UserDefaultsManager.swift */,
+				ACA0081925864C4500FED80A /* KeyboardManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,8 +324,8 @@
 			files = (
 				AC0338C3257923BD00E3775D /* AppDelegate.swift in Sources */,
 				AC30B86C257688D100E3DEB8 /* PasteboardObservableObject.swift in Sources */,
-				ACA0081525811B8000FED80A /* WorkspaceObserver.swift in Sources */,
 				AC0338A52577E9C900E3775D /* UserDefaultsManager.swift in Sources */,
+				ACA0081A25864C4500FED80A /* KeyboardManager.swift in Sources */,
 				AC2C9CE72572759B00140D91 /* PasteboardObserver.swift in Sources */,
 				AC1ABD5A25615F410068AF39 /* ContentView.swift in Sources */,
 				AC1ABD5825615F410068AF39 /* MyFirstMacApp2.swift in Sources */,
